@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>Desktop message bubble regression</title>
+<style>
+  body { margin: 0; font: 16px/1.7 system-ui, sans-serif; }
+  main { height: 100vh; overflow-y: auto; padding: 30px 100px; box-sizing: border-box; }
+  .contents { display: contents; }
+  .sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+  [data-user-message-bubble] { margin-left: auto; background: #111; color: white; padding: 16px;
+    border-radius: 24px; max-width: 600px; }
+  .whitespace-pre-wrap { white-space: pre-wrap; }
+  .answer { min-height: 500px; }
+</style>
+<!-- The wrapper / bubble nesting mirrors the user's DevTools screenshot.
+     Test messages and identifiers are synthetic, without conversation content. -->
+<main>
+  <div class="flex flex-col gap-1.5">
+    <div class="contents"><div class="contents"><div class="group flex flex-col"><div class="flex flex-col gap-3 browser:gap-1">
+      <div class="block-BOZwFn">
+        <h4 class="sr-only m-0 select-none">You said:</h4>
+        <div class="group/user-message flex flex-col items-end gap-2" data-chatgpt-search-unit-key="fallback-turn-1:0:user" data-chatgpt-search-message-ids="test-message-one">
+          <div class="w-full" data-content-search-unit-key="fallback-turn-1:0:user">
+            <div class="group/user-message flex w-full flex-col gap-1 items-end">
+              <div data-user-message-bubble="true" class="bg-user-message text-user-message">
+                <div class="flex flex-col items-end gap-1"><div class="relative w-full min-w-0 text-size-chat leading-relaxed">
+                  <div class="contents" data-search-result-target><div><div class="text-size-chat whitespace-pre-wrap" dir="auto">第一条测试提问：请解释消息导航。</div></div></div>
+                </div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div></div></div>
+  </div>
+  <div class="answer markdown">这是助手回复，不应生成圆点。</div>
+  <div class="block-BOZwFn">
+    <h4 class="sr-only">You said:</h4>
+    <div class="group/user-message" data-chatgpt-search-message-ids="test-message-two">
+      <div data-user-message-bubble="true"><div class="contents"><div class="text-size-chat whitespace-pre-wrap" dir="auto">第二条测试提问：如何定位到这条消息？</div></div></div>
+    </div>
+  </div>
+  <div class="answer markdown">这是第二条助手回复。</div>
+</main></html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>当前回答目录 · 本地模拟对话</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.85 system-ui,sans-serif;color:#28333b;background:#fff}
+aside{position:fixed;inset:0 auto 0 0;width:290px;padding:28px;background:#f8f9fa;border-right:1px solid #eee}
+aside p{font-size:14px;color:#7a858c;margin-top:28px}header{height:64px;margin-left:290px;padding:16px 32px;border-bottom:1px solid #eee}
+main{margin-left:290px;height:calc(100vh - 64px);overflow:auto;padding:24px max(72px,calc((100vw - 1050px)/2)) 80px}
+.markdown{padding:8px 0 40px}section{min-height:310px}h2{font-size:23px;line-height:1.6}h3{font-size:19px}
+[data-user-message-bubble]{margin:20px 0 30px 16%;padding:14px 20px;background:#f2f4f5;border-radius:22px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}blockquote{border-left:3px solid #ddd;padding-left:20px;margin:24px 0;color:#687780}
+.tail{height:800px}html.dark body{background:#171a1d;color:#e5e9ec}html.dark aside{background:#202428}
+@media(max-width:1100px){aside{display:none}main,header{margin-left:0}main{padding-left:64px;padding-right:64px}}
+</style>
+<aside><strong>ChatGPT</strong><p>＋ 新建对话</p><p>项目</p><p>论文阅读</p><p>最近的对话</p><p>理解遗传算法与提示词优化</p></aside>
+<header>ChatGPT <small style="float:right;color:#7a858c">本地演示 · 模拟对话内容</small></header>
+<main><div data-conversation-transcript>
+<div data-message-role="user"><div data-user-message-bubble><h4 style="font:inherit;margin:0">请解释遗传算法如何优化 prompt，并给出评估方法。</h4></div></div>
+<div data-message-role="assistant" id="answer-one"><h4 class="sr-only">ChatGPT said:</h4><div class="markdown">
+<section><h2 id="section-one">一、遗传算法如何优化 prompt</h2><p>把提示词看作候选解，通过评估、选择和修改，逐步寻找更有效的表达方式。</p><blockquote><h4>引用内容不作为回答章节</h4><p>固定模型参数，只优化输入给模型的提示词。</p></blockquote></section>
+<section><h3 id="section-child">1.1 候选提示词的生成与选择</h3><p>首先准备多个初始提示词，在同一组任务上测量效果，再保留表现较好的候选。</p><p>修改候选时，可以调整任务说明、示例或输出格式。</p></section>
+<section><h2 id="section-two">二、如何评估优化结果</h2><p>使用独立测试集评估准确率、稳定性与调用成本，并比较优化前后的表现。</p></section>
+</div></div>
+<div data-user-message-bubble>如果换一个任务，评估方式应该怎么调整？</div>
+<div data-chatgpt-search-unit-key="fallback-turn-1:assistant" id="answer-two" style="display:contents"><div class="markdown">
+<section><h2 id="section-other">新任务的评估方案</h2><p>先明确任务指标，再制定测试集和对照实验。</p></section>
+<section><h3>错误分析与复现</h3><p>记录失败案例，检查不同随机种子下的结果。</p></section>
+</div></div>
+<div data-user-message-bubble>谢谢。</div><div data-message-author-role="assistant" id="answer-empty"><p>不客气，祝研究顺利。</p></div>
+</div><div class="tail"></div></main></html>

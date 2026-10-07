@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT 时间轴助手",
+  "version": "1.4.3",
+  "description": "消息时间轴、当前回答目录、章节跳转、重要消息收藏、LaTeX 公式复制、提示词库与 Enter 换行。",
+  "permissions": ["storage", "clipboardWrite"],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": ["reading.js", "positions.js", "extras.js", "outline.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

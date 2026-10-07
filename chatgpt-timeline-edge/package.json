@@ -1,0 +1,13 @@
+{
+  "name": "chatgpt-message-bookmarks",
+  "version": "1.4.3",
+  "private": true,
+  "description": "Edge extension for navigating user messages in ChatGPT",
+  "scripts": {
+    "test": "node --test tests/bookmarks.test.cjs",
+    "check": "node --check content.js && node --check extras.js && node --check outline.js && node --check positions.js && node --check reading.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}
